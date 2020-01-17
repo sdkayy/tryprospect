@@ -7,12 +7,14 @@ import {
   EDIT_TODO
 } from "../constants/ActionTypes";
 
+// Just a small thought process piece, We could use date for completed on or added on by just updating, but this is a way to possibly "future proof" in my eyes in a real app so we could show a history etc. Such as added @ time done @ time, average completed time of tasks etc etc.
 const initialState = [
   {
     text: "Buy milk and cookies",
     completed: true,
     id: 0,
-    date: new Date("1/17/2020 10:00:00")
+    date: new Date("1/17/2020 10:00:00"),
+    completed_at: new Date("1/17/2020 10:04:00")
   },
   {
     text: "Eat cookies",
@@ -54,7 +56,8 @@ export default function todos(state = initialState, action) {
         todo.id === action.id
           ? {
               ...todo,
-              completed: true
+              completed: true,
+              completed_at: new Date()
             }
           : todo
       );

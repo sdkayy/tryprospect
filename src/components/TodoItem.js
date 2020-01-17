@@ -80,7 +80,12 @@ export default class TodoItem extends Component {
               {todo.text}
             </label>
             <label style={{ padding: "4px 60px", fontSize: ".825rem" }}>
-              {timeDifferenceShort(+new Date(todo.date))}
+              {todo.completed ? "Completed @ " : "Added @ "}{" "}
+              {timeDifferenceShort(
+                todo.completed
+                  ? +new Date(todo.completed_at)
+                  : +new Date(todo.date)
+              )}
             </label>
           </div>
           <button className="destroy" onClick={() => deleteTodo(todo.id)} />
