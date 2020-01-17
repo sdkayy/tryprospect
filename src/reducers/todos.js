@@ -66,7 +66,8 @@ export default function todos(state = initialState, action) {
       const areAllMarked = state.every(todo => todo.completed);
       return state.map(todo => ({
         ...todo,
-        completed: !areAllMarked
+        completed: !areAllMarked,
+        completed_at: new Date()
       }));
 
     case CLEAR_COMPLETED:
