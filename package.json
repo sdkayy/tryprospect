@@ -3,14 +3,14 @@
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
-    "react-scripts": "^2.0.2"
+    "react-scripts": "2.1.5"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "dayjs": "^1.8.19",
     "prop-types": "^15.6.1",
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "react-redux": "^5.0.7",
     "redux": "^3.5.2",
     "reselect": "^3.0.1",
